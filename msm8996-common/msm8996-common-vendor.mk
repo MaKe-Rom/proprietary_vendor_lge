@@ -170,7 +170,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/lge/msm8996-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/lge/msm8996-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
-    vendor/lge/msm8996-common/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
     vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.sysnode@1.0-service \
     vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
     vendor/lge/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.gnss@1.0-service \
@@ -519,7 +518,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcreverb.so \
@@ -539,6 +537,46 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
     vendor/lge/msm8996-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db
+
+# Wifi
+PRODUCT_COPY_FILES += \
+    vendor/lge/msm8996-common/proprietary/framework/wifi-service.jar:system/framework/wifi-service.jar \
+    vendor/lge/msm8996-common/proprietary/bin/wificond:system/bin/wificond \
+    vendor/lge/msm8996-common/proprietary/etc/init/wificond.rc:system/etc/init/wificond.rc \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
+    vendor/lge/msm8996-common/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service \
+    vendor/lge/msm8996-common/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc \
+    vendor/lge/msm8996-common/proprietary/lib/android.hardware.wifi@1.0.so:system/lib/android.hardware.wifi@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib/android.hardware.wifi.supplicant@1.0.so:system/lib/android.hardware.wifi.supplicant@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/android.hardware.wifi.supplicant@1.0.so:system/lib64/android.hardware.wifi.supplicant@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblowi_wifihal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
+    vendor/lge/msm8996-common/proprietary/lib/libQWiFiSoftApCfg.so:system/lib/libQWiFiSoftApCfg.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libQWiFiSoftApCfg.so:system/lib64/libQWiFiSoftApCfg.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwificond_ipc.so:system/lib/libwificond_ipc.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwificond_ipc.so:system/lib64/libwificond_ipc.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifiext_jni.so:system/lib/libwifiext_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifiext_jni.so:system/lib64/libwifiext_jni.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifilgeext_jni.so:system/lib/libwifilgeext_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifilgeext_jni.so:system/lib64/libwifilgeext_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifip2p.so:system/lib/libwifip2p.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifip2p.so:system/lib64/libwifip2p.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifip2pext_jni.so:system/lib/libwifip2pext_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifip2pext_jni.so:system/lib64/libwifip2pext_jni.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifi-service.so:system/lib/libwifi-service.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifi-service.so:system/lib64/libwifi-service.so \
+    vendor/lge/msm8996-common/proprietary/lib/libwifi-system.so:system/lib/libwifi-system.so \
+    vendor/lge/msm8996-common/proprietary/lib64/libwifi-system.so:system/lib64/libwifi-system.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxtwifi_ulp_adaptor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/mmi_wifi.so:$(TARGET_COPY_OUT_VENDOR)/lib/mmi_wifi.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/mmi_wifi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mmi_wifi.so \
+    vendor/lge/msm8996-common/proprietary/lib/vendor.lge.hardware.wifi.supplicant@1.0.so:system/lib/vendor.lge.hardware.wifi.supplicant@1.0.so \
+    vendor/lge/msm8996-common/proprietary/lib64/vendor.lge.hardware.wifi.supplicant@1.0.so:system/lib64/vendor.lge.hardware.wifi.supplicant@1.0.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/vendor.lge.hardware.wifi.supplicant@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.wifi.supplicant@1.0_vendor.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/vendor.lge.hardware.wifi.supplicant@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.wifi.supplicant@1.0_vendor.so \
 
 # Wifi Display
 PRODUCT_COPY_FILES += \
